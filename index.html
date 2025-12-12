@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 Photobooth Interaktif</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="photobooth-container">
+        
+        <header>
+            <h1>photobooth</h1>
+        </header>
+
+        <div class="camera-view">
+            <video id="videoElement" autoplay playsinline></video>
+            
+            <canvas id="canvasElement" style="display:none;"></canvas>
+
+            <div id="overlay"></div>
+        </div>
+
+        <div id="previewContainer" class="preview-strip">
+            <canvas id="previewCanvas"></canvas>
+        </div>
+        <div class="controls">
+            <button id="startButton">Mulai Akses Kamera</button>
+            
+            <select id="stripLayout">
+                <option value="single">Strip Tunggal (1x3)</option>
+                <option value="grid">Strip Grid (3x)</option>
+            </select>
+
+            <button id="switchCameraButton" style="display:none;">🔁 Ganti Kamera</button>
+            <button id="captureButton" disabled>📷 Ambil Foto</button>
+            <button id="downloadButton" disabled>⬇️ Unduh Foto</button>
+            <button id="retakeButton" disabled>🔁 Foto Ulang</button>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Hasil Foto</h2>
+            <p>(Disarankan klik kanan / tahan untuk mengunduh)</p>
+            <div id="resultContainer" class="photo-strip">
+                </div>
+        </div>
+
+        <img id="singleStripFrame" src="assets/frames/frame-03.png" style="display:none;" alt="Desain Strip 1x3">
+        <img id="gridStripFrame" src="assets/frames/frame-02.png" style="display:none;" alt="Desain Strip Grid">
+        
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
