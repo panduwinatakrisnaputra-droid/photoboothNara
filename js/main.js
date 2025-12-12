@@ -233,7 +233,7 @@ function createFinalStrip(imageURLs, layout) {
         const margin_x = 18;
         
         // Y PERTAMA (POSISI FOTO PERTAMA)
-        const margin_y_atas = 170; 
+        const margin_y_atas = 157; 
         
         // GAP BARU
         const gap = 5; 
